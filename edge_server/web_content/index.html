@@ -5,8 +5,15 @@
     <body>
         <div class="container">
             <h1 class="header">Success!</h1>
-            <h2 class="header">Second version</h2>
+            <h2 class="header">Third version, as failed to save configuration</h2>
             <img src="images/image.jpg" alt="success kid"/>
+            <textarea>
+                A finding I made is, if you've pushed, and pulled an unsigned image before enabling Cosign's 'Allow only verified images to be deployed.' Rule
+                you'll still be able to pull that unsigned image that was pulled before the config was set.
+                I initially thought that it first checks that the image exists locally, before it does the pull/hits the verification check.
+                However deleting the image locally and pulling the image again did not fail. Perhaps there's a marker in the registry for when the config was turned on.
+                All other unsigned images that is pushed after enabling the configuration will fail pulling.
+            </textarea>
         </div>
     </body>
 </html>

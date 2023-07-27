@@ -1,3 +1,3 @@
 #! /usr/bin/env bash
 
-docker build -t edge_server:v1 edge_server/
+docker build -t registry.containerleaks.com/adeyemi-edge-server/edge_server:v3 edge_server/
