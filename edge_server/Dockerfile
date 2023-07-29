@@ -5,6 +5,8 @@ LABEL org.opencontainers.image.description="Containter Fundamentals - Static Web
 LABEL org.opencontainers.image.server_type="edge_server"
 LABEL org.opencontainers.image.licenses=APACHE2
 
+RUN apk update && apk upgrade --no-cache
+
 COPY config/nginx.conf /etc/nginx/
 COPY web_content/ /var/www
 EXPOSE 80
